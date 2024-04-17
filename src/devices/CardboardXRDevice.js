@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 
-import CardboardVRDisplay from 'cardboard-vr-display';
-import WebVRDevice from './WebVRDevice';
+import CardboardVRDisplay from "cardboard-vr-display/dist/cardboard-vr-display.js";
+import WebVRDevice from "./WebVRDevice";
 
 export default class CardboardXRDevice extends WebVRDevice {
   /**
