@@ -19,6 +19,7 @@
  * rest of the functionality needed.
  */
 
+/** @type {any} */
 const _global = typeof global !== 'undefined' ? global :
                 typeof self !== 'undefined' ? self :
                 typeof window !== 'undefined' ? window : {};
