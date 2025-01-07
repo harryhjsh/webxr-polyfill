@@ -12,21 +12,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import XRInputSource from './XRInputSource';
 import XRRigidTransform from './XRRigidTransform';
 import * as mat4 from 'gl-matrix/src/gl-matrix/mat4';
 
 export const PRIVATE = Symbol('@@webxr-polyfill/XRSpace');
 
 // Not exposed, for reference only
-export const XRSpaceSpecialTypes = [
-  "grip",
-  "target-ray"
-];
+export const XRSpaceSpecialTypes = ['grip', 'target-ray'];
 
+/** */
 export default class XRSpace {
   /**
    * @param {string?} specialType
-   * @param {XRInputSource?} inputSource 
+   * @param {XRInputSource?} inputSource
    */
   constructor(specialType = null, inputSource = null) {
     this[PRIVATE] = {
@@ -35,7 +34,7 @@ export default class XRSpace {
       // The transform for the space in the base space, along with it's inverse
       baseMatrix: null,
       inverseBaseMatrix: null,
-      lastFrameId: -1
+      lastFrameId: -1,
     };
   }
 
