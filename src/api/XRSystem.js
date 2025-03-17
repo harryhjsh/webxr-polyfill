@@ -139,6 +139,8 @@ export default class XRSystem extends EventTarget {
     const sessionId = await this[PRIVATE].device.requestSession(mode, enabledFeatures);
     const session = new XRSession(this[PRIVATE].device, mode, sessionId);
 
+    this[PRIVATE].device?.provideNativeXRSession?.(sessionId, session);
+
     if (mode == 'inline') {
       this[PRIVATE].inlineSessions.add(session);
     } else {
